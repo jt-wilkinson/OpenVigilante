@@ -51,5 +51,3 @@ OpenVigilante is a Python script that allows users to select a file, compute its
 
 6. The summarized report of the scan results will be displayed, showing the counts of different scan categories (e.g., undetected, malicious, type-unsupported).
 
-## Example Output
-
