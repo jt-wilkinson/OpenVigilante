@@ -57,7 +57,7 @@ def print_report(vt_result):
 
 # Main function
 def main():
-    api_key = "a877a05e5e66ad3dda91ff6e1ba6fa57ac743bf935f46a566f9ca3704f744274"
+    api_key = "YOUR_API_KEY"
     print("Please select a file to hash:")
     file_path = select_file()
     if file_path:
