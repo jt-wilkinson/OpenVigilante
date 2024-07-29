@@ -46,12 +46,12 @@ def print_report(vt_result):
         print(f"Total Scans: {len(attributes.get('last_analysis_results', {}))}")
         
         print("\nScan Summary:")
-        scan_summary = defaultdict(list)
-        for engine, result in attributes.get('last_analysis_results', {}).items():
-            scan_summary[result['category']].append(engine)
+        scan_summary = defaultdict(int)
+        for result in attributes.get('last_analysis_results', {}).values():
+            scan_summary[result['category']] += 1
         
-        for category, engines in scan_summary.items():
-            print(f"{category.capitalize()}: {', '.join(engines)}")
+        for category, count in scan_summary.items():
+            print(f"{category.capitalize()}: {count}")
     else:
         print("Error:", vt_result.get('error', {}).get('message', 'Unknown error'))
 
